@@ -16,4 +16,5 @@ NOTES:
 void * sortedArrayPositionsChange(int *Arr, int len)
 {
 	return NULL;
+
 }
