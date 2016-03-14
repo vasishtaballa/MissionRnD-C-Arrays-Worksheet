@@ -15,20 +15,30 @@ NOTES:
 
 #include <stdio.h>
 
-void * studentsCount(int *Arr, int len, int score, int *lessCount, int *moreCount) {
-	if (Arr == NULL)
+void * studentsCount(int *Arr, int len, int score, int *lessCount, int *moreCount)
+{
+	/*
+	* The complexity of code is O(log(n))
+	* It just scans till the number is less than or equal to the
+	required score.
+	*/
+	if (Arr == NULL)			// If Arr is NULL
 		return NULL;
 	if (len < 0 || score < 0)
 		return NULL;
-	int i;
-	*lessCount = 0;
-	*moreCount = 0;
-	for (i = 0; i < len; i++)
+	int i = 0;
+	*lessCount = 0;				//Initializing the variables	
+	int temp = 0;
+	while (Arr[i] <= score)
 	{
-		if (Arr[i]>score)
-			*moreCount = *moreCount + 1;
-		else if (Arr[i] < score)
+		if (i == len)
+			break;
+		if (Arr[i]<score)					//lesser case
 			*lessCount = *lessCount + 1;
+		else if (Arr[i] == score)			//Equal case
+			temp += 1;
+		i++;
 	}
+	*moreCount = len - *lessCount - temp;
 	return NULL;
 }

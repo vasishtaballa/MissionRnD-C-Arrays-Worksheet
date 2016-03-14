@@ -14,9 +14,33 @@ NOTES: Don't create new array, try to change the input array.
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int removeArrayDuplicates(int *Arr, int len)
+int  removeArrayDuplicates(int *Arr, int len)
 {
-	
-	return -1;
+	if (Arr == NULL)
+		return -1;
+	if (len < 0)
+		return -1;
+	int i, j, p = 0, k = 0;
+	for (i = 0; i < len; i++)
+	{
+		for (j = i + 1; j < len; j++)
+		{
+			if (Arr[i] == Arr[j])
+			{
+				Arr[j] = '-';
+				k++;
+			}
+		}
+	}
+	for (i = 0; i < len; i++)
+	{
+		if (Arr[i] != 45)
+		{
+			Arr[p] = Arr[i];
+			p++;
+		}
+	}
+	Arr = (int *)realloc(Arr, (p)* (sizeof(int)));
 }
