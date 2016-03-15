@@ -42,5 +42,5 @@ int  removeArrayDuplicates(int *Arr, int len)
 			p++;
 		}
 	}
-	Arr = (int *)realloc(Arr, (p)* (sizeof(int)));
+	return p;
 }

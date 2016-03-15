@@ -22,20 +22,20 @@ void * studentsCount(int *Arr, int len, int score, int *lessCount, int *moreCoun
 	* It just scans till the number is less than or equal to the
 	required score.
 	*/
-	if (Arr == NULL)			// If Arr is NULL
+	if (Arr == NULL)			
 		return NULL;
 	if (len < 0 || score < 0)
 		return NULL;
 	int i = 0;
-	*lessCount = 0;				//Initializing the variables	
+	*lessCount = 0;				
 	int temp = 0;
 	while (Arr[i] <= score)
 	{
 		if (i == len)
 			break;
-		if (Arr[i]<score)					//lesser case
+		if (Arr[i]<score)		
 			*lessCount = *lessCount + 1;
-		else if (Arr[i] == score)			//Equal case
+		else if (Arr[i] == score)			
 			temp += 1;
 		i++;
 	}

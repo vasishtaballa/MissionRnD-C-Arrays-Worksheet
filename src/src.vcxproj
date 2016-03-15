@@ -13,9 +13,7 @@
   <ItemGroup>
     <ClCompile Include="MainArrays1.cpp" />
     <ClCompile Include="studentsCount.cpp" />
-    <ClCompile Include="topKStudents.cpp" />
     <ClCompile Include="scoresDescendingSort.cpp" />
-    <ClCompile Include="removeArrayDuplicates.cpp" />
     <ClCompile Include="sortedArrayInsertNumber.cpp" />
     <ClCompile Include="sortedArrayPositionsChange.cpp" />
   </ItemGroup>
